@@ -12,6 +12,14 @@ Tetris written in C for linux terminal, featuring top notch ASCII graphics based
 ## Instructions
 Just compile it and run it, as simple as that. The game was written for linux terminal, it should work on most \*nix systems... On windows, you can probably get it to run using MinGW or Cygwin, but I don't guarantee it will work as intended (it probably will, but some keys might not work, Cygwin users might have experience flicker). A much better solution would be running it on a \*nix machine over ssh (yes, you can play it that way). If you want to play it on your phone, again, just ssh to a server and have at it.
 
+Compilation requires the following packages:
+* gcc
+* ncurses-devel
+
+Compile with:
+
+`$ gcc -lncurses tetris.c -o tetris`
+
 ## Rules
 Well, regular tetris stuff. I am using a custom rotation system based on Nintendo Rotation System. The same goes for scoring. No wall kicks, but there is a lock delay (equal to one drop interval). After you clear 10 lines, level is increased by 1. Maximum level is 20.
 
